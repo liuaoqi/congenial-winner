@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link type = "text/css" rel = "stylesheet" href = "./demo.css">
+</head>
+<body>
+    <h1>Floating Boxes Demo</h1>
+
+    <div class='feature-block'>
+        <div class='feature-description'>
+            <h2>Creating the FloatingBoxes instance </h2>
+            <div class='code-text'>
+                /* Create a FloatingBoxGenerator instance created with setId=0 */
+                <br>
+                const boxes = new FloatingBoxGenerator(0);
+            </div>
+
+            <h4> Note: FloatingBoxes generated with the given instance will produce div elements having class 'floating-box-0' with the given Id 0.
+                <br>
+                For the purpose of this demo,
+                boxes will be generated on the top left corner of the webpage
+                that is set in the style sheet, as following: </h4>
+                
+            <div class='code-text'>
+                /* Stylesheet */
+                <br>
+                .floating-box-0 {
+                    left: 10px;
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class='feature-block'>
+        <div class='feature-description'>
+            <h2> Creating a FloatingBox </h2>
+            <div class='code-text'>
+                boxes.createBox(id);
+            </div>
+
+            <h4> Adding DOM Elements to the box </h4>
+            <div class='code-text'>
+                /* Get name of the box using getBoxNameById(id) */
+                <br>
+                const boxName = boxes.getBoxNameById(i);
+                <hr>
+                const nameElement = document.createElement('h5');
+                <br>
+                nameElement.innerText = 'Box Name: ' + boxName;
+                <br>
+                nameElement.style = 'margin: 15px; z-index: 0; overflow: auto;'
+                <hr>
+                /* Adding the DOM element to the box using addDOMById(element, id) */
+                <br>
+                boxes.addDOMById(nameElement, i);
+            </div>
+            <h4> ... </h4>
+            <div class='code-text'>
+                /* Get the box DOM Element using getBoxDOMById(id) */
+                <br>
+                const box = boxes.getBoxDOMById(i);
+                <hr>
+                const idElement = document.createElement('h5');
+                <br>
+                idElement.innerText = 'DOM Id: ' + box.id;
+                <br>
+                idElement.style = 'margin: 15px; z-index: 0; overflow: auto;'
+                <br>
+                boxes.addDOMById(idElement, i);
+            </div>
+
+            <div class='test-btn' id='create-new-btn'>Click To Create A New Box</div>
+
+        </div>
+    </div>
+
+    <div class='feature-block'>
+        <div class='feature-description'>
+            <h2> Dragging </h2>
+            <h4> Enable dragging for all added boxes </h4>
+            <div class='code-text'>
+                boxes.enableDragging();
+            </div>
+        </div>
+        <div class='test-btn' id='enable-dragging-btn'>Click To Make All Added Boxes Draggable</div>
+        <div class='feature-description'>
+            <h4> Disable dragging of all added boxes </h4>
+            <div class='code-text'>
+                boxes.disableDragging();
+            </div>
+        </div>
+        <div class='test-btn' id='disable-dragging-btn'>Click To Make All Added Boxes Non-Draggable</div>
+        <div class='feature-description'>
+            <h4> Make specific component to be available for dragging </h4>
+            <div class='code-text'>
+                /* The DOM elements will be made draggable by enableDragging(element)
+                <br>
+                must have Id in the following format:
+                <br>
+                'floating-box-' + element + sid + '-' + bid */
+                <br>
+                boxes.enableDragging('border-top');
+            </div>
+        </div>
+        <div class='test-btn' id='dragging-top-btn'>Click To Make The Boxes Only Draggable By Top Border</div>
+    </div>
+    
+    <div class='feature-block'>
+        <div class='feature-description'>
+            <h2> Remove all boxes </h2>
+            <div class='code-text'>
+                boxes.removeBox();
+            </div>
+        </div>
+        <div class='test-btn' id='delete-btn'>Click Here To Remove The Box</div>
+    </div>
+    
+    <div class='feature-block'>
+        <div class='feature-description'>
+            <a href='./resizing'>
+                <div class="test-btn" id="api-btn"><h2>Next</h2></div>
+            </a>
+        </div>
+    </div>
+
+    <div class='feature-block'>
+        <div class='feature-description'>
+            <a href='../'>
+                <div class="test-btn" id="api-btn"><h2>Homepage</h2></div>
+            </a>
+            <a href='./api'>
+                <div class="test-btn" id="api-btn"><h2>API Page</h2></div>
+            </a>
+        </div>
+    </div>
+</body>
+    <!-- the library file -->
+    <script defer type='text/javascript' src='../lib/index.js'></script>
+    <!-- demo JS file that uses the library -->
+    <script defer type='text/javascript' src='./demo.js'></script>
+    <script defer type='text/javascript' src='./dragging.js'></script>
+</html>
+
+

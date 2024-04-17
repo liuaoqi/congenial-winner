@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link type = "text/css" rel = "stylesheet" href = "../demo.css">
+</head>
+<body>
+    <div>
+        <h1>API Documentation</h1>
+    </div>
+    
+    <div class='feature-block'>
+        <div class='feature-description'>
+            <h2>API</h2>
+        </div>
+    </div>
+    <div class='feature-block'>
+        <div class='feature-description'>
+            <h2>FloatingBoxGenerator</h2>
+            <h3> Properties </h3>
+            <div class='code-text'>
+                <b>setId</b>: Id of the set of boxes set when FloatingBoxGenerator is created.
+                <br>
+                <b>boxes</b>: A dictionary of FloatingBox objects having each object mapped to its id.
+            </div>
+        </div>
+        <div class='feature-description'>
+            <h3>Methods</h3>
+            <b>createBox</b>
+            <div class='code-text'>
+                <b>parameters:</b> setId, boxId
+                <br>
+                <b>description:</b> Create a FloatingBox element with the given set id and box id (div id: 'floating-box-' + setId + '-' + boxId), add it to the document body
+            </div>
+            <b>setBoxName</b>
+            <div class='code-text'>
+                <b>parameters:</b>id, name
+                <br>
+                <b>description:</b> Set name to the box with given id
+            </div>
+            <b>getBoxNameById</b>
+            <div class='code-text'>
+                <b>parameters:</b> id
+                <br>
+                <b>description:</b> Return the box element with the given id
+            </div>
+            <b>getSetId</b>
+            <div class='code-text'>
+                <b>description:</b> Return the set id of the current FloatingBoxGenerator instance
+            </div>
+            <b>getBoxes</b>
+            <div class='code-text'>
+                <b>description:</b> Return the array of FloatingBox
+            </div>
+            <b>getBoxDOMById</b>
+            <div class='code-text'>
+                <b>parameters:</b> id
+                <br>
+                <b>description:</b> Return the DOM element of the box matching the given id
+            </div>
+            <b>enableDragging</b>
+            <div class='code-text'>
+                <b>parameters:</b> element
+                <br>
+                <b>description:</b> enable dragging by the given element, if no element is given, enable dragging for the whole box
+                <br>
+                <b>default elements: </b> 'corner', 'border-top', 'border-right', 'border-bottom', 'border-left'
+            </div>
+            <b>enableDraggingById</b>
+            <div class='code-text'>
+                <b>parameters:</b> id, element
+                <br>
+                <b>description:</b> enable dragging by the given element for the box with the given id
+                <br>
+                <b>default elements: </b> 'corner', 'border-top', 'border-right', 'border-bottom', 'border-left'
+            </div>
+            <b>disableDragging</b>
+            <div class='code-text'>
+                <b>parameters:</b> element
+                <br>
+                <b>description:</b> disable dragging by the given element, if no element is given, disable dragging for the whole box
+                <br>
+                <b>default elements: </b> 'corner', 'border-top', 'border-right', 'border-bottom', 'border-left'
+            </div>
+            <b>disableDraggingById</b>
+            <div class='code-text'>
+                <b>parameters:</b> id, element
+                <br>
+                <b>description:</b> disable dragging for the box with the given id of the given element
+                <br>
+                <b>default elements: </b> 'corner', 'border-top', 'border-right', 'border-bottom', 'border-left'
+            </div>
+            <b>enableResizing</b>
+            <div class='code-text'>
+                <b>description:</b> enable resizing for all boxes
+            </div>
+            <b>enableResizingById</b>
+            <div class='code-text'>
+                <b>parameters:</b> id
+                <br>
+                <b>description:</b> enable resizing for the box with the given id
+            </div>
+            <b>disableResizing</b>
+            <div class='code-text'>
+                <b>description:</b> disable resizing for all boxes
+            </div>
+            <b>removeBoxes</b>
+            <div class='code-text'>
+                <b>description:</b> remove all added boxes
+            </div>
+            <b>removeBoxById</b>
+            <div class='code-text'>
+                <b>parameters:</b> id
+                <br>
+                <b>description:</b> remove the box with the given id from the html and dictionary of FloatingBoxes
+            </div>
+            <b>hideBoxById</b>
+            <div class='code-text'>
+                <b>parameters:</b> id
+                <br>
+                <b>description:</b> hide the box with the given id on the web page
+            </div>
+            <b>unhideBoxById</b>
+            <div class='code-text'>
+                <b>parameters:</b> id
+                <br>
+                <b>description:</b> unhide the box with the given id on the web page
+            </div>
+            <b>addDOMById</b>
+            <div class='code-text'>
+                <b>parameters:</b> object: HTMLDOMElement, id
+                <br>
+                <b>description:</b> add the given object to the box with the specified id
+            </div>
+            <b>getDOMElementsById</b>
+            <div class='code-text'>
+                <b>parameters:</b> id
+                <br>
+                <b>description:</b> return the HTMLDOMElement of the box with given id
+            </div>
+    </div>
+
+    <div class='feature-block'>
+        <div class='feature-description'>
+            <a href='../../'>
+                <div class="test-btn" id="demo-btn"><h2>Homepage</h2></div>
+            </a>
+            <a href='../'>
+                <div class="test-btn" id="demo-btn"><h2>Demo Page</h2></div>
+            </a>
+        </div>
+    </div>
+</body>
+    <!-- the library file -->
+    <script defer type='text/javascript' src='../../lib/index.js'></script>
+    <!-- demo JS file that uses the library -->
+    <script defer type='text/javascript' src='../demo.js'></script>
+</html>
+
+

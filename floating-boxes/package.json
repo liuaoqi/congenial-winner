@@ -1,0 +1,28 @@
+{
+  "name": "floating-boxes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "log": "^6.0.0"
+  },
+  "engines": {
+    "node": "12.18.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csc309-summer-2020/js-library-liuaoqi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/csc309-summer-2020/js-library-liuaoqi/issues"
+  },
+  "homepage": "https://github.com/csc309-summer-2020/js-library-liuaoqi#readme"
+}

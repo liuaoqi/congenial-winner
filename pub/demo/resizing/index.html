@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link type = "text/css" rel = "stylesheet" href = "../demo.css">
+</head>
+<body>
+    <h1>Floating Boxes Demo</h1>
+
+    <div class='feature-block'>
+        <div class='feature-description'>
+            <h2> Creating FloatingBoxes to continue </h2>
+            <div class='test-btn' id='create-new-btn'>Click To Create A New Box</div>
+        </div>
+    </div>
+
+    <div class='feature-block'>
+        <div class='feature-description'>
+            <h2> Dragging </h2>
+            <h4> Enable dragging for all added boxes </h4>
+        </div>
+        <div class='test-btn' id='enable-dragging-btn'>Click To Make All Added Boxes Draggable</div>
+        <div class='feature-description'>
+            <h4> Disable dragging of all added boxes </h4>
+        </div>
+        <div class='test-btn' id='disable-dragging-btn'>Click To Make All Added Boxes Non-Draggable</div>
+    </div>
+    
+    <div class='feature-block'>
+        <div class='feature-description'>
+            <h2> Resizing </h2>
+            <h4> Enable resizing for all added boxes </h4>
+            <div class='code-text'>
+                boxes.enableResizing();
+            </div>
+        </div>
+        <div class='test-btn' id='enable-resizing-btn'>Click To Enable Resizing For All Boxes</div>
+        <div class='feature-description'>
+            <h4> Disable resizing for all added boxes </h4>
+            <div class='code-text'>
+                boxes.disableResizing();
+            </div>
+        </div>
+        <div class='test-btn' id='disable-resizing-btn'>Click To Disable Resizing For All Boxes</div>
+    </div>
+    
+    <div class='feature-block'>
+        <div class='feature-description'>
+            <h2> Remove all boxes </h2>
+        </div>
+        <div class='test-btn' id='delete-btn'>Click Here To Remove The Box</div>
+    </div>
+
+
+    <div class='feature-block'>
+        <div class='feature-description'>
+            <a href='../'>
+                <div class="test-btn" id="demo-btn"><h2>Prev</h2></div>
+            </a>
+        </div>
+    </div>
+
+    <div class='feature-block'>
+        <div class='feature-description'>
+            <a href='../../'>
+                <div class="test-btn" id="demo-btn"><h2>Homepage</h2></div>
+            </a>
+            <a href='../api'>
+                <div class="test-btn" id="demo-btn"><h2>API Page</h2></div>
+            </a>
+        </div>
+    </div>
+</body>
+    <!-- the library file -->
+    <script defer type='text/javascript' src='../../lib/index.js'></script>
+    <!-- demo JS file that uses the library -->
+    <script defer type='text/javascript' src='../demo.js'></script>
+    <script defer type='text/javascript' src='./resizing.js'></script>
+</html>
+
+
